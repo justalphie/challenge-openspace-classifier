@@ -12,6 +12,9 @@ class Seat:
         self.free = free
         self.occupant = occupant
 
+    def __str__(self):
+        return f"Seat is occupied by {self.occupant}"
+
     def set_occupant(self, name: str):
         """
         Set the occupant of the seat.
@@ -43,7 +46,9 @@ class Table():
         """
         self.capacity = capacity
         self.seats = [Seat() for i in range(capacity)]
-
+        
+    def __str__(self):
+        return f"Table has {self.capacity} seats."
 
     def has_free_spot(self) -> bool:
         """

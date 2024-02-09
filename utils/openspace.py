@@ -14,6 +14,8 @@ class Openspace:
         self.tables = [Table() for i in range(number_of_tables)]
         self.number_of_tables = number_of_tables
     
+    def __str__(self):
+        return f"Openspace has {self.number_of_tables} tables."
     
     def organize(self, names: list[str]):
         """
