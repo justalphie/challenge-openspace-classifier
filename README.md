@@ -16,4 +16,5 @@ Openspace classifier is a project that allows you to assign seats at the tables 
 ## Contact
 
 - Alfiya Khabibullina - just.alphie@gmail.com
-- Project Link: [Project Repository URL]
+- Project Link: (https://github.com/justalphie/challenge-openspace-classifier)https://github.com/justalphie/challenge-openspace-classifier
+
