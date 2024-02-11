@@ -10,12 +10,20 @@ class Openspace:
     Paramenters:
         number_of_tables (int): The number of tables in the openspace. Default is 6.
     """
-    def __init__(self, number_of_tables: int = 6):
-        self.tables = [Table() for i in range(number_of_tables)]
-        self.number_of_tables = number_of_tables
+    def __init__(self, number_of_tables: int = 6, table_capacity: int = 4):
+        self.tables = [Table(table_capacity) for i in range(number_of_tables)]
+
     
     def __str__(self):
-        return f"Openspace has {self.number_of_tables} tables."
+        return f"Openspace has {len(self.tables)} tables."
+
+    def add_table(self, how_many_add=1, table_capacity=4):
+        self.tables.extend([Table(table_capacity) for i in range(how_many_add)])
+
+    def empty_all_tables(self):
+        for table in self.tables:
+            for seat in table.seats:
+                seat.remove_occupant()
     
     def organize(self, names: list[str]):
         """
