@@ -19,7 +19,7 @@ class Seat:
         """
         Set the occupant of the seat.
         Parameters:
-        - name (str): The name of the occupant.        
+        - name (str): The name of the occupant.  
         Raises:
         - Exception: If the seat is already occupied.
         """
@@ -46,7 +46,7 @@ class Table():
         """
         self.capacity = capacity
         self.seats = [Seat() for i in range(capacity)]
-        
+
     def __str__(self):
         return f"Table has {self.capacity} seats."
 
